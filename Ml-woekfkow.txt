@@ -1,0 +1,23 @@
+1. Data Collection
+Data collection is the first step in machine learning. It involves gathering relevant information from different sources. The quality of collected data directly affects model performance. In this project, student performance data was collected containing study hours, attendance, assignments, and marks.
+
+2. Data Cleaning
+Data cleaning removes errors, missing values, duplicates, and inconsistencies. Clean data improves model accuracy and reliability. It ensures the dataset is suitable for analysis and prediction.
+
+3. Feature Selection
+Feature selection identifies the most important variables used for prediction. Good feature selection reduces complexity and improves performance. Here, Study_Hours, Attendance, and Assignments are selected as features.
+
+4. Train-Test Split
+The dataset is divided into training and testing sets. Training data teaches the model while testing data evaluates performance. This helps measure how well the model generalizes to unseen data.
+
+5. Model Training
+Model training involves feeding the training data into a machine learning algorithm. The algorithm learns patterns and relationships between features and labels. Linear Regression is used in this project.
+
+6. Testing
+Testing is performed using unseen data. The trained model predicts results on the test dataset. This step checks whether the model has learned correctly.
+
+7. Evaluation
+Evaluation measures model performance using metrics such as MAE and R² Score. These metrics help determine prediction accuracy. A good model should have low error and high R² value.
+
+8. Prediction
+Prediction is the final step where the trained model is used to predict outcomes for new data. It applies learned patterns to estimate future values. In this project, student marks are predicted.
