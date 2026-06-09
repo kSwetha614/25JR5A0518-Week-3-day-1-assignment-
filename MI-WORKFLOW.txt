@@ -1,0 +1,31 @@
+1. Data Collection:Data collection is the process of gathering information from different sources.
+In machine learning, data is collected to train the model and make predictions accurately.
+
+2. Data Cleaning:Data cleaning means removing errors, missing values, and duplicate data from the dataset.
+This step improves data quality and helps the model perform better.
+
+3. Feature Selection:
+Feature selection is choosing important columns from the dataset for prediction.
+Useful features help the model learn faster and increase accuracy.
+
+4. Train-Test Split :
+Train-test split divides the dataset into training data and testing data.
+Training data is used to train the model, while testing data checks model performance.
+
+5. Model Training :
+Model training is the process of teaching the machine learning algorithm using training data.
+The model learns patterns and relationships between features and labels.
+
+6. Testing :
+Testing is used to check how well the trained model works on new data.
+It helps identify whether the model predicts correctly or not.
+
+7. Evaluation:
+Evaluation measures the accuracy and performance of the machine learning model.
+Metrics like accuracy, MAE, and RMSE are used to evaluate the model
+
+8. Prediction:
+Prediction is the process of using the trained model to estimate results for new data.
+The model predicts the output based on the input features provided.
+
+
