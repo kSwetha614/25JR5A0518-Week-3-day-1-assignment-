@@ -1,0 +1,95 @@
+# ================================
+# Bonus Challenge — House Price Prediction
+# ================================
+
+# Import Libraries
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+# ================================
+# Create Dataset
+# ================================
+
+data = {
+    "Area": [1000,1200,1500,1800,2000,2200,2500,2700,3000,3200,
+             3500,3700,4000,4200,4500,4700,5000,5200,5500,6000],
+
+    "Bedrooms": [2,2,3,3,3,4,4,4,5,5,
+                 5,5,6,6,6,6,7,7,7,8],
+
+    "Age": [10,8,7,6,5,5,4,4,3,3,
+            2,2,2,1,1,1,1,1,1,1],
+
+    "Price": [30,35,40,45,50,55,60,65,70,75,
+              80,85,90,95,100,105,110,115,120,130]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Display Dataset
+print("House Price Dataset")
+print(df)
+
+# ================================
+# Features and Label
+# ================================
+
+X = df[["Area", "Bedrooms", "Age"]]
+y = df["Price"]
+
+# ================================
+# Train Test Split
+# ================================
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# ================================
+# Train Model
+# ================================
+
+model = LinearRegression()
+
+model.fit(X_train, y_train)
+
+# ================================
+# Model Details
+# ================================
+
+print("\nModel Coefficients:")
+print(model.coef_)
+
+print("\nModel Intercept:")
+print(model.intercept_)
+
+# ================================
+# Predictions
+# ================================
+
+new_data = pd.DataFrame({
+    "Area": [1600, 2800, 4500],
+    "Bedrooms": [3, 4, 6],
+    "Age": [5, 3, 1]
+})
+
+predictions = model.predict(new_data)
+
+print("\nPredicted House Prices:")
+print(predictions)
+
+# ================================
+# Actual vs Predicted
+# ================================
+
+y_pred = model.predict(X_test)
+
+comparison = pd.DataFrame({
+    "Actual Price": y_test,
+    "Predicted Price": y_pred
+})
+
+print("\nActual vs Predicted Prices")
+print(comparison)
